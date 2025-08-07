@@ -20,7 +20,7 @@ const Notes = () => {
 
     useEffect(() => {
         if (subject === "Biology") {
-            fetch(`http://localhost:5000/api/notes/${mainTab}/${subject}`)
+            fetch(`https://neurowaves.onrender.com/api/notes/${mainTab}/${subject}`)
                 .then((res) => res.json())
                 .then((data) => setNotes(data || []))
                 .catch((err) => {

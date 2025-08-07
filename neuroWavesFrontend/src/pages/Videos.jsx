@@ -25,7 +25,7 @@ const Videos = () => {
         setLoading(true);
         setComingSoon(false);
 
-        fetch(`http://localhost:5000/api/youtube/${mainTab}/${subject}`)
+        fetch(`https://neurowaves.onrender.com/api/youtube/${mainTab}/${subject}`)
             .then((res) => {
                 if (res.status === 400) {
                     setVideos([]);
