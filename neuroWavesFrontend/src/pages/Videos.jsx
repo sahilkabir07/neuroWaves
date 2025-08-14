@@ -13,6 +13,9 @@ const subjectTabClasses = (active) =>
         : "bg-white/80 text-blue-900 hover:bg-blue-100 hover:shadow-md border border-yellow-300"
     }`;
 
+const subjects = ["Biology", "Physics", "Chemistry"];
+const classes = ["11th", "12th"];
+
 const Videos = () => {
     const [mainTab, setMainTab] = useState("11th");
     const [subject, setSubject] = useState("Biology");
@@ -24,6 +27,7 @@ const Videos = () => {
     useEffect(() => {
         setLoading(true);
         setComingSoon(false);
+
         fetch(`https://neurowaves.onrender.com/api/youtube/${mainTab}/${subject}`)
             .then((res) => {
                 if (res.status === 400) {
@@ -58,15 +62,16 @@ const Videos = () => {
                 >
                     Our YouTube Playlists
                 </motion.h2>
+
                 {/* Class Tabs */}
-                <div className="flex justify-center gap-8 mb-8">
-                    {["11th", "12th"].map((tab) => (
+                <div className="flex justify-center gap-8 mb-8 flex-wrap">
+                    {classes.map((tab) => (
                         <motion.button
                             key={tab}
                             className={tabClasses(mainTab === tab)}
                             onClick={() => {
                                 setMainTab(tab);
-                                setSubject("Biology");
+                                setSubject("Biology"); // default subject when switching class
                             }}
                             whileHover={{ y: -2 }}
                             whileTap={{ scale: 0.95 }}
@@ -75,36 +80,23 @@ const Videos = () => {
                         </motion.button>
                     ))}
                 </div>
+
                 {/* Subject Tabs */}
-                {/* Responsive subject tabs: stack for mobile, row for md+ */}
-                <div className="w-full mb-8">
-                    <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                        {/* First row: Biology, Chemistry */}
-                        {["Biology", "Chemistry"].map((subj) => (
-                            <motion.button
-                                key={subj}
-                                className={subjectTabClasses(subject === subj) + ' min-w-[120px]'}
-                                onClick={() => setSubject(subj)}
-                                whileHover={{ y: -1 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                {subj}
-                            </motion.button>
-                        ))}
-                    </div>
-                    <div className="flex justify-center gap-4 md:gap-6 mt-3">
-                        {/* Second row: Physics */}
+                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                    {subjects.map((subj) => (
                         <motion.button
-                            key="Physics"
-                            className={subjectTabClasses(subject === "Physics") + ' min-w-[120px]'}
-                            onClick={() => setSubject("Physics")}
+                            key={subj}
+                            className={subjectTabClasses(subject === subj) + " min-w-[120px]"}
+                            onClick={() => setSubject(subj)}
                             whileHover={{ y: -1 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Physics
+                            {subj}
                         </motion.button>
-                    </div>
+                    ))}
                 </div>
+
+                {/* Content */}
                 {loading ? (
                     <div className="flex flex-col items-center justify-center gap-4 py-16">
                         <motion.div
@@ -189,6 +181,7 @@ const Videos = () => {
                                 allowFullScreen
                             ></iframe>
                         </div>
+
                         {/* Playlist Thumbnails */}
                         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                             {videos.map((video, i) => (
