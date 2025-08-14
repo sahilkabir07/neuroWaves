@@ -31,9 +31,9 @@ const cardVariants = {
 };
 
 const ServicesAbout = () => (
-    <section className="py-16 px-4 md:px-8 bg-white/80">
+    <section className="py-16 px-4 md:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-900">Meet Us For</h2>
-        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
             {services.map((service, i) => (
                 <motion.div
                     key={service.title}

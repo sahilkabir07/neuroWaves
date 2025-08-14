@@ -17,14 +17,19 @@ const Footer = () => {
                 >
                     {/* Left: Logo + Title + Address (more space) */}
                     <div className="flex flex-row items-center gap-10 flex-[3] min-w-[340px] py-4 px-2 md:px-8 -xl">
-                        <span className="w-40 h-32 flex items-center justify-center rounded-[100%] bg-gradient-to-b from-[#1A1A1A] to-white shadow-xl">
-                            <img src="/neuroclasses.png" alt="Neuro Wave Logo" className="w-28 h-28 rounded-full object-cover " />
+                        <span className="flex items-center justify-center rounded-full bg-gradient-to-b from-[#1A1A1A] to-white shadow-xl p-1 min-w-[6.5rem] min-h-[6.5rem] w-[6.5rem] h-[6.5rem] max-w-none max-h-none">
+                            <img
+                                src="/neuroclasses.png"
+                                alt="Neuro Wave Logo"
+                                className="rounded-full object-contain w-[6rem] h-[6rem] min-w-[6rem] min-h-[6rem] max-w-none max-h-none"
+                                style={{ aspectRatio: '1 / 1', width: '96px', height: '96px' }}
+                            />
                         </span>
                         <div className="flex flex-col items-start gap-2 ml-2">
                             <span className="font-bold text-yellow-400 text-4xl">Neuro Wave Classes</span>
                             <div className="flex flex-col text-base text-neutral-300 gap-2 mt-2">
-                                <span>123 Main Street, City, State</span>
-                                <span>Phone: +91-9876543210</span>
+                                <span>Friends colony, Katra School ,near Zakir Hussain School, PATNA-800006</span>
+                                <span>Phone: 9142214117</span>
                                 <span>Email: info@neurowave.com</span>
                                 {/* Add more info here if needed */}
                             </div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 const HeroAbout = () => (
-    <section className="relative w-full h-[340px] md:h-[420px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-700 to-yellow-400 pt-32">
+    <section className="relative w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-700 to-yellow-400 pt-40 pb-8">
         <div className="relative z-10 text-center max-w-3xl mx-auto px-4">
             <motion.blockquote
                 initial={{ opacity: 0, y: 40 }}

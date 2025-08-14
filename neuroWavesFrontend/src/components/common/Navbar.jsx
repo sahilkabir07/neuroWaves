@@ -80,7 +80,7 @@ const Navbar = () => {
             className="fixed top-0 left-0 w-full z-[9999] bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl"
             style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-32 text-white relative">
+            <div className="w-full px-2 flex justify-between items-center h-32 text-white relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-yellow-400/30 pointer-events-none"></div>
                 <div
                     className="flex items-center gap-5 cursor-pointer select-none h-full relative z-10"
@@ -101,40 +101,41 @@ const Navbar = () => {
                             />
                         </div>
                         <div className="relative flex flex-col items-center justify-center h-full">
-                            <motion.svg
-                                className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-full pointer-events-none"
-                                viewBox="0 0 200 40"
-                                initial={{ opacity: 0 }}
-                                whileHover={{ opacity: 1 }}
-                                animate={{
-                                    y: [0, 4, -4, 4, -4, 0],
-                                    transition: { duration: 2, repeat: Infinity, repeatType: "reverse" }
-                                }}
-                                style={{ zIndex: 0 }}
-                            >
-                                <motion.path
-                                    d="M0 20 Q 50 40 100 20 T 200 20"
-                                    fill="none"
-                                    stroke="#facc15"
-                                    strokeWidth="6"
-                                    initial={{ pathLength: 0.8 }}
-                                    animate={{ pathLength: 1 }}
-                                    transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
-                                />
-                            </motion.svg>
-                            <motion.span
-                                className="font-extrabold text-4xl md:text-5xl tracking-wide text-yellow-400 drop-shadow-lg relative z-10 leading-tight text-center"
-                                style={{ background: "transparent" }}
-                                whileHover={{
-                                    scale: 1.07,
-                                    textShadow: "0 0 8px #facc15"
-                                }}
-                                transition={{ type: "spring", stiffness: 200 }}
-                            >
-                                Neuro Wave
-                                <br />
-                                <span className="block text-2xl font-bold text-blue-300 tracking-wider mt-1">Classes</span>
-                            </motion.span>
+                            <div className="flex flex-col items-center justify-center">
+                                <motion.svg
+                                    className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-full pointer-events-none"
+                                    viewBox="0 0 200 40"
+                                    initial={{ opacity: 0 }}
+                                    whileHover={{ opacity: 1 }}
+                                    animate={{
+                                        y: [0, 4, -4, 4, -4, 0],
+                                        transition: { duration: 2, repeat: Infinity, repeatType: "reverse" }
+                                    }}
+                                    style={{ zIndex: 0 }}
+                                >
+                                    <motion.path
+                                        d="M0 20 Q 50 40 100 20 T 200 20"
+                                        fill="none"
+                                        stroke="#facc15"
+                                        strokeWidth="6"
+                                        initial={{ pathLength: 0.8 }}
+                                        animate={{ pathLength: 1 }}
+                                        transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+                                    />
+                                </motion.svg>
+                                <motion.span
+                                    className="font-extrabold text-4xl md:text-5xl tracking-wide text-yellow-400 drop-shadow-lg relative z-10 leading-tight text-center"
+                                    style={{ background: "transparent" }}
+                                    whileHover={{
+                                        scale: 1.07,
+                                        textShadow: "0 0 8px #facc15"
+                                    }}
+                                    transition={{ type: "spring", stiffness: 200 }}
+                                >
+                                    Neuro Wave
+                                </motion.span>
+                                <span className="block text-2xl font-bold text-blue-300 tracking-wider mt-1 text-center">Classes</span>
+                            </div>
                         </div>
                     </div>
                 </div>

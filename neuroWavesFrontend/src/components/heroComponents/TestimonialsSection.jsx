@@ -12,24 +12,20 @@ const fadeUp = {
 
 const testimonials = [
     {
-        name: "Aarav Sharma",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+        name: "Chandan Kumar",
         text: "Neuro Wave's live doubt sessions made all the difference! I finally understood concepts that confused me for months.",
     },
     {
-        name: "Priya Verma",
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+        name: "Poonam Kumari",
         text: "The notes and video lectures are so clear and easy to follow. My scores improved and I feel confident for my exams!",
     },
     {
-        name: "Rahul Singh",
-        avatar: "https://randomuser.me/api/portraits/men/65.jpg",
+        name: "Ravi Kumar",
         text: "Personalized progress tracking helped me stay motivated. The teachers are super supportive!",
     },
     {
-        name: "Simran Kaur",
-        avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-        text: "Best online coaching experience! Flexible timings and instant help whenever I needed it.",
+        name: "Kamran Khan",
+        text: "Best coaching experience! Flexible timings and instant help whenever I needed it.",
     },
 ];
 
@@ -58,7 +54,7 @@ const TestimonialsSection = () => (
                     transition={{ type: "spring", stiffness: 200 }}
                     className="bg-gradient-to-br from-yellow-100 via-white to-blue-100 p-6 rounded-2xl shadow-lg border flex flex-col items-center text-center"
                 >
-                    <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full mb-3 border-2 border-yellow-300 shadow" />
+                    {/* Removed avatar image for realism */}
                     <p className="italic text-gray-700 mb-2">“{t.text}”</p>
                     <p className="font-semibold text-blue-800">— {t.name}</p>
                 </motion.div>
