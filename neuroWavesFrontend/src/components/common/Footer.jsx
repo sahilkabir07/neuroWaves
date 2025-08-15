@@ -30,7 +30,7 @@ const Footer = () => {
                             <div className="flex flex-col text-base text-neutral-300 gap-2 mt-2">
                                 <span>Friends colony, Katra School ,near Zakir Hussain School, PATNA-800006</span>
                                 <span>Phone: 9142214117</span>
-                                <span>Email: info@neurowave.com</span>
+                                <span>Email: neurowaveclasses@gmail.com</span>
                                 {/* Add more info here if needed */}
                             </div>
                         </div>

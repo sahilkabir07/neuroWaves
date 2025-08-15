@@ -68,7 +68,7 @@ const ContactUs = () => {
                 <div className="flex flex-row flex-wrap gap-16 w-full justify-center items-center mb-6">
                     <div className="flex flex-row items-center gap-3">
                         <span className="text-lg font-bold text-blue-300">Email:</span>
-                        <a href="mailto:info@neurowave.com" className="text-yellow-400 font-semibold text-lg hover:underline">info@neurowave.com</a>
+                        <a href="mailto:neurowaveclasses@gmail.com" className="text-yellow-400 font-semibold text-lg hover:underline">neurowaveclasses@gmail.com</a>
                     </div>
                     <div className="flex flex-row items-center gap-3">
                         <span className="text-lg font-bold text-blue-300">Phone:</span>
