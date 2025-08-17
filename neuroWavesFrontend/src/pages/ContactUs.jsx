@@ -76,7 +76,12 @@ const ContactUs = () => {
                     </div>
                     <div className="flex flex-row items-center gap-3">
                         <span className="text-lg font-bold text-blue-300">Location:</span>
-                        <span className="text-yellow-400 font-semibold text-lg">Friends colony, Katra School , near Zakir Hussain School, PATNA-800006</span>
+                        <span className="text-yellow-400 font-semibold text-lg">
+                            Friends Colony,<br />
+                            Near Katra School,<br />
+                            Near Dr Zakir Hussain Public School,
+                            Patna - 800006
+                        </span>
                     </div>
                 </div>
             </motion.div>
